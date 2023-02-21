@@ -1,10 +1,9 @@
 # Article-MultiClass-Text-Classification-DeepLearning
 
-While manually classifying articles to their respective categories takes a lot of time and effort, this neural network model provides an automated and efficient solution that can handle large volumes of data quickly and accurately. The goal of this project is to classify articles into one of five categories: sports, tech, business, entertainment, or politics.
-
+While manually classifying articles to their respective categories takes a lot of time and effort, this neural network model provides an automated and efficient solution that can handle large volumes of data quickly and accurately. The goal of this project is to classify articles into one of five categories: sports, tech, business, entertainment, or politics.<br/>
+The F1 Accuracy Score achieved is 93%<br/>
 Hopefully, this project can be useful for various applications, such as news recommendation systems, content moderation, and trend analysis. This README will demonstrate more details on the dataset, methodology, and results of the project. 
 
-The dataset used contains 2,225 articles where it was preprocessed and prepared for training. In the model development phase, I used sequential API to include the layers I need such as LSTM, Embedding, Dense and Dropout. The model was trained in 50 epochs. By the end of the training, 92% accuracy was obtained
 
 ## Dataset
 Source of Data: <br/> https://raw.githubusercontent.com/susanli2016/PyCon-Canada-2019-NLP-Tutorial/master/bbc-text.csv<br/>
@@ -37,7 +36,7 @@ The data was then split into training and test sets.<br/>
 ## Model Development
 
 <p align="center">
-  <img src="https://github.com/natashanazamil/Article-MultiClass-Text-Classification-DeepLearning/blob/main/images/model_architecture.PNG?raw=true" alt="Model Architecture">
+  <img src="https://github.com/natashanazamil/Article-MultiClass-Text-Classification-DeepLearning/blob/main/images/model_architecture.png?raw=true" alt="Model Architecture">
   <br>
   <em>Model Architecture</em>
 </p>
@@ -46,7 +45,7 @@ The model was compiled and trained using:
 * loss: categorical_crossentropy
 * optimizer: adam
 * metrics: accuracy
-* epochs: 50
+* epochs: 100
 * callbacks: TensorBoard, EarlyStopping
 
 <p align="center">
@@ -83,7 +82,7 @@ From the confusion matrix, we can see that most of the texts were classified acc
   <em>Classification Report</em>
 </p>
 
-As for the classification report, we can see that the model managed to achieve 92% of the F1 Accuracy Score.
+As for the classification report, we can see that the model managed to achieve 93% of the F1 Accuracy Score.
 
 ## Model Deployment
 The model was then deployed as .h5 file. As well as the tokenizer and one-hot-encoder as .json and .pkl file respectively. They can be found in the **model** file.
